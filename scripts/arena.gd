@@ -11,6 +11,7 @@ const INTERVALO_MINIMO := 0.8
 
 var jogador: CharacterBody2D
 var ativa := false
+var itens_habilitados := true
 
 const CELULA := 16
 const PASTA := "res://sprites/ninja-adventure/Backgrounds/Tilesets/"
@@ -117,19 +118,22 @@ func criar_colisao(area: Rect2, nome: String) -> void:
 	corpo.add_child(colisao)
 	$Colisoes.add_child(corpo)
 
-func iniciar(alvo: CharacterBody2D) -> void:
+func iniciar(alvo: CharacterBody2D, com_itens: bool = true) -> void:
 	jogador = alvo
+	itens_habilitados = com_itens
 	ativa = true
 	jogador.definir_ativo(true)
 	for ator in $Atores.get_children():
 		ator.definir_alvo(jogador)
 		ator.definir_ativo(true)
 	for item in $Itens.get_children():
-		item.definir_ativo(true)
+		item.definir_ativo(itens_habilitados)
 	$Horda.start(2.0)
-	$NascimentoItens.start(3.0)
-	if $Itens.get_child_count() == 0:
-		nascer_item()
+	$NascimentoItens.stop()
+	if itens_habilitados:
+		$NascimentoItens.start(3.0)
+		if $Itens.get_child_count() == 0:
+			nascer_item()
 
 func parar() -> void:
 	ativa = false
@@ -174,7 +178,7 @@ func nascer_sapo() -> void:
 		return
 
 func nascer_item() -> void:
-	if not ativa:
+	if not ativa or not itens_habilitados:
 		return
 	var ocupados: Array[Vector2] = []
 	for item in $Itens.get_children():
@@ -192,5 +196,5 @@ func nascer_item() -> void:
 		return
 
 func ao_coletar_item(_item: Area2D) -> void:
-	if ativa:
+	if ativa and itens_habilitados:
 		item_coletado.emit()

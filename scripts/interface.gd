@@ -5,6 +5,8 @@ extends CanvasLayer
 signal iniciar_solicitado
 signal reiniciar_solicitado
 
+var sobrevivencia := false
+
 const CORACAO := preload("res://sprites/ninja-adventure/Ui/LifeReceptacle/heart.png")
 
 func _ready() -> void:
@@ -58,6 +60,15 @@ func caixa(fundo: Color, borda: Color, largura: int) -> StyleBoxFlat:
 	estilo.content_margin_bottom = 16
 	return estilo
 
+func configurar_modo(modo_sobrevivencia: bool) -> void:
+	sobrevivencia = modo_sobrevivencia
+	$HUD/Linha/Folha.visible = not sobrevivencia
+	$HUD/Linha/Itens.visible = not sobrevivencia
+	$HUD/Linha/Tempo.visible = sobrevivencia
+	$Inicio/Cartao/Conteudo/Objetivo/Folha.visible = not sobrevivencia
+	$Inicio/Cartao/Conteudo/Modo.text = "SOBREVIVÊNCIA  •  MODO HORDA" if sobrevivencia else "COLETA  •  MODO HORDA"
+	$Inicio/Cartao/Conteudo/Objetivo/Texto.text = "Sobreviva por 60 segundos" if sobrevivencia else "Reúna 20 folhas para vencer"
+
 func mostrar_inicio() -> void:
 	$Resultado.hide()
 	$Inicio.show()
@@ -67,16 +78,20 @@ func ocultar_telas() -> void:
 	$Inicio.hide()
 	$Resultado.hide()
 
-func atualizar_hud(vida: int, coletados: int, meta: int) -> void:
+func atualizar_hud(vida: int, coletados: int, meta: int, tempo_restante: int = 60) -> void:
 	$HUD/Linha/Vida.text = "Vidas: %d" % vida
 	$HUD/Linha/Itens.text = "Itens: %d / %d" % [coletados, meta]
+	$HUD/Linha/Tempo.text = "Tempo: %d s" % tempo_restante
 	for i in range($HUD/Linha/Coracoes.get_child_count()):
 		$HUD/Linha/Coracoes.get_child(i).modulate.a = 1.0 if i < vida else 0.2
 
-func mostrar_resultado(venceu: bool, coletados: int) -> void:
+func mostrar_resultado(venceu: bool, coletados: int, tempo_sobrevivido: int = 0) -> void:
 	$Inicio.hide()
 	$Resultado/Cartao/Conteudo/Titulo.text = "Vitória!" if venceu else "Fim de jogo"
 	$Resultado/Cartao/Conteudo/Resumo.text = "Você reuniu as 20 folhas!" if venceu else "Os sapos alcançaram você."
 	$Resultado/Cartao/Conteudo/Contagem.text = "Itens coletados: %d / 20" % coletados
+	if sobrevivencia:
+		$Resultado/Cartao/Conteudo/Resumo.text = "Você sobreviveu aos 60 segundos!" if venceu else "Os sapos alcançaram você."
+		$Resultado/Cartao/Conteudo/Contagem.text = "Tempo sobrevivido: %d s" % tempo_sobrevivido
 	$Resultado.show()
 	$Resultado/Cartao/Conteudo/Reiniciar.grab_focus()
