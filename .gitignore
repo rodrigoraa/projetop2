@@ -1,0 +1,3 @@
+# Caches e logs locais gerados pela Godot.
+.godot/
+*.log

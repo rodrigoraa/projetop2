@@ -1,0 +1,26 @@
+; Projeto acadêmico criado com assistência de IA.
+config_version=5
+
+[application]
+config/name="Pântano de sapos venenosos"
+run/main_scene="res://scenes/principal.tscn"
+config/features=PackedStringArray("4.6", "GL Compatibility")
+
+[display]
+window/size/viewport_width=640
+window/size/viewport_height=384
+window/size/window_width_override=1280
+window/size/window_height_override=768
+window/stretch/mode="canvas_items"
+
+[layer_names]
+2d_physics/layer_1="Mundo"
+2d_physics/layer_2="Jogador"
+2d_physics/layer_3="Inimigos"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/default_filters/use_nearest_mipmap_filter=false
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.18, 0.28, 0.16, 1)

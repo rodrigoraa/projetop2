@@ -1,0 +1,248 @@
+{
+  "pacote": "Ninja Adventure Asset Pack",
+  "autores": [
+    "Pixel-boy",
+    "AAA"
+  ],
+  "licenca": "CC0-1.0",
+  "pagina_oficial": "https://pixel-boy.itch.io/ninja-adventure-asset-pack",
+  "espelho_download": "https://github.com/MarioLDD/Kuroshiro-adventure",
+  "commit_origem": "0476a561d5e6da477d5d2de2e738f0595754adbb",
+  "observacao": "A página oficial estava bloqueada pelo proxy do ambiente. Download pelo espelho público no GitHub, que preserva README do pacote e licença CC0 integral. Imagens copiadas sem alterações; nenhum código do espelho foi incorporado.",
+  "arquivos": [
+    {
+      "arquivo": "Actor/Animals/Frog/Faceset.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Animals/Frog/Faceset.png",
+      "sha256": "4be4c7a27f98cbe4aadb13f8efdb6b54d68398d59d587671a747d90433d0ebf2",
+      "largura": 38,
+      "altura": 38
+    },
+    {
+      "arquivo": "Actor/Animals/Frog/SpriteSheet.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Animals/Frog/SpriteSheet.png",
+      "sha256": "78668d63f2b9feea5ad89b4776f79f410819c2725583a96b711b5bc63a7dc198",
+      "largura": 32,
+      "altura": 16
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Attack.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Attack.png",
+      "sha256": "5ac0a5a76f1429a57cfee5981de0da0b2a68dc6056d37282f2487476f19ee576",
+      "largura": 120,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Charge.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Charge.png",
+      "sha256": "cfd5fdf2b91b9093980c3304a381584f5184ffe0382ff7ec35806b9c6a5418d2",
+      "largura": 280,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Faceset.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Faceset.png",
+      "sha256": "e4dc8b065b7e8a9f29951ede4483f5960bdae7d6316ad8b96355ebb9f46e5336",
+      "largura": 38,
+      "altura": 38
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Hit.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Hit.png",
+      "sha256": "ed0b5ce7820cb6f049eac008660cae9e6ad28c72e8c533a326144a467150cdde",
+      "largura": 120,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Idle40x40.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Idle40x40.png",
+      "sha256": "dc2d67d1333e73259691a0bca9aff06377757a157be9c19317aac3a83b34ee15",
+      "largura": 200,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog/Jump.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog/Jump.png",
+      "sha256": "cc264f1da8d6974decc7595f7254d5aed6b146499e3859c6b9d8cbfe36989c41",
+      "largura": 240,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Attack.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Attack.png",
+      "sha256": "4f707f4dbc506ab519e317881f6907e4cd22c1751224caba4d7e9cfdb5b1dfb5",
+      "largura": 120,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Charge.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Charge.png",
+      "sha256": "3c7099b39d4cdc45586fc961e7fb1d1439bd1b4ba1da0a2a9e3b2b3e0d49ac2d",
+      "largura": 280,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Faceset.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Faceset.png",
+      "sha256": "c65a29b96ccc1bdb0c60f8357db066c7134a879fbe8073cdb1c49d84e916d8a1",
+      "largura": 38,
+      "altura": 38
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Hit.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Hit.png",
+      "sha256": "80e9d3e09337701e7a554ac1c14b92f838c804190bf091afc0eafc4367d75275",
+      "largura": 120,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Idle.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Idle.png",
+      "sha256": "b2a70441a47c4d8e583e9d6ebedc0e0c27ab6e97c6cd89d29520195c829213c1",
+      "largura": 200,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Boss/GiantFrog2/Jump.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Boss/GiantFrog2/Jump.png",
+      "sha256": "8e5bb92a73e63e99e8d6ecfb03e880376817dfc25f302518fe8ae381cfe09af3",
+      "largura": 240,
+      "altura": 40
+    },
+    {
+      "arquivo": "Actor/Characters/Hunter/Faceset.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Characters/Hunter/Faceset.png",
+      "sha256": "c961b7d3aa9250616d6b648ff3ac702e93362e80058454fb049c91ed1f3f8555",
+      "largura": 38,
+      "altura": 38
+    },
+    {
+      "arquivo": "Actor/Characters/Hunter/SpriteSheet.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Actor/Characters/Hunter/SpriteSheet.png",
+      "sha256": "26af2137e450276687d308706519d6a57799e4a666d1a966076b1837c2032d81",
+      "largura": 64,
+      "altura": 112
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetFloor.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetFloor.png",
+      "sha256": "e111065065edf806e7e893330086e68efc8755175d92f14d087b42d40a331e16",
+      "largura": 352,
+      "altura": 417
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetFloorDetail.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetFloorDetail.png",
+      "sha256": "eab91fc2a1d10191e3c26a6e936175a2492b6ef481c4ba7d984b717954bf1c01",
+      "largura": 256,
+      "altura": 80
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetNature.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetNature.png",
+      "sha256": "51eedd957ad4ac88988d170aa83a42404ef8fdebff9e6753b6fe80841ab3d5bb",
+      "largura": 384,
+      "altura": 336
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetWater.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetWater.png",
+      "sha256": "927e1fa1e793bb0398fdaad40cea22792c20f66703cdba80fb9462df7cbc275c",
+      "largura": 448,
+      "altura": 272
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetRelief.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetRelief.png",
+      "sha256": "9f4156d97efe449e161ec9065edd48f296e977cfd77f7e60474f2ddaae34c2e9",
+      "largura": 320,
+      "altura": 192
+    },
+    {
+      "arquivo": "Backgrounds/Tilesets/TilesetReliefDetail.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Tilesets/TilesetReliefDetail.png",
+      "sha256": "f372a146d382ae3be1b1cac3278fa0771a62bf13bf4367a04a68ee0a48d0e8dc",
+      "largura": 192,
+      "altura": 192
+    },
+    {
+      "arquivo": "Backgrounds/Animated/Plant/SpriteSheet16x16.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Animated/Plant/SpriteSheet16x16.png",
+      "sha256": "63548a84e6c798b37678c8facf85926ee9635f6066de631734d290dbb228b794",
+      "largura": 64,
+      "altura": 16
+    },
+    {
+      "arquivo": "Backgrounds/Animated/Water Ripples/SpriteSheet16x16.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Backgrounds/Animated/Water%20Ripples/SpriteSheet16x16.png",
+      "sha256": "a62e0bcb3cf20b646b7d5b9f07f82bfd0d795df4fec809cc5a013f1ce0740d49",
+      "largura": 64,
+      "altura": 16
+    },
+    {
+      "arquivo": "Items/Food/TeaLeaf.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Items/Food/TeaLeaf.png",
+      "sha256": "a426c88d0ce48a60c8f15f9f22c042f5deb17a8d5a3c75e1ecc823e26deda283",
+      "largura": 16,
+      "altura": 16
+    },
+    {
+      "arquivo": "Items/Food/Seed1.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Items/Food/Seed1.png",
+      "sha256": "ab715a9ea53be68a983811dfd58bd89a7c40947067be27c94d0cecf35e3eff01",
+      "largura": 8,
+      "altura": 8
+    },
+    {
+      "arquivo": "Items/Potion/LifePot.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Items/Potion/LifePot.png",
+      "sha256": "45dddffc0c603beb7833d54f817e706d570606484b6c91309a4d6a1d4fc6fa36",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "Items/Potion/WaterPot.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Items/Potion/WaterPot.png",
+      "sha256": "a317aea8b0305b04fb9f634c98ac05f75b5a7ca51cdea73e5ec5d77670f9b551",
+      "largura": 9,
+      "altura": 11
+    },
+    {
+      "arquivo": "Ui/LifeReceptacle/heart.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Ui/LifeReceptacle/heart.png",
+      "sha256": "f1163b91560c5097ac1de4f26470abaa9e3461f3bc4a8685fd7daae2d8cabb61",
+      "largura": 80,
+      "altura": 16
+    },
+    {
+      "arquivo": "Ui/LifeReceptacle/heart_2.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Ui/LifeReceptacle/heart_2.png",
+      "sha256": "171a6e599458702c9bc28d8a873dd1174023011604d51bf7329f5fc6f840a50d",
+      "largura": 64,
+      "altura": 16
+    },
+    {
+      "arquivo": "Ui/LifeReceptacle/heart_3.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/Ui/LifeReceptacle/heart_3.png",
+      "sha256": "b645782126a8897327aba6f6076776cccc60039a99a55d26dc904cdbe46629c4",
+      "largura": 64,
+      "altura": 16
+    },
+    {
+      "arquivo": "FX/Environment/Fog.png",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/FX/Environment/Fog.png",
+      "sha256": "1d3a5a678b53e0e89926f1fa38cda5429b0a8905e637b8413b2066ecd96480a9",
+      "largura": 320,
+      "altura": 180
+    },
+    {
+      "arquivo": "README.original.md",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/README.md",
+      "sha256": "679aadda4c7cd2e113d6d5f5a85798bb41ce0d5e647a7ac13b7667fd5a3f6036"
+    },
+    {
+      "arquivo": "LICENSE.txt",
+      "origem": "https://raw.githubusercontent.com/MarioLDD/Kuroshiro-adventure/0476a561d5e6da477d5d2de2e738f0595754adbb/Assets/NinjaAdventure/LICENSE.txt",
+      "sha256": "1ab4dba5d237a49ad295604fae2098e039d3ae5fd57a62bbcbeff127210fba6e"
+    }
+  ]
+}

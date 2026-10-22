@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/arena.gd" id="1_arena"]
+
+[node name="Arena" type="Node2D"]
+script = ExtResource("1_arena")
+
+[node name="Chao" type="TileMapLayer" parent="."]
+
+[node name="Agua" type="TileMapLayer" parent="."]
+
+; Atlas de 32 px: compensar centralização na célula de 16 px.
+[node name="Vegetacao" type="TileMapLayer" parent="."]
+position = Vector2(8, 8)
+
+[node name="Colisoes" type="Node2D" parent="."]
+
+[node name="Inicio" type="Marker2D" parent="."]
+position = Vector2(320, 192)
+
+[node name="PontosItens" type="Node2D" parent="."]
+
+[node name="Ponto01" type="Marker2D" parent="PontosItens"]
+position = Vector2(144, 144)
+
+[node name="Ponto02" type="Marker2D" parent="PontosItens"]
+position = Vector2(224, 96)
+
+[node name="Ponto03" type="Marker2D" parent="PontosItens"]
+position = Vector2(320, 80)
+
+[node name="Ponto04" type="Marker2D" parent="PontosItens"]
+position = Vector2(432, 96)
+
+[node name="Ponto05" type="Marker2D" parent="PontosItens"]
+position = Vector2(496, 160)
+
+[node name="Ponto06" type="Marker2D" parent="PontosItens"]
+position = Vector2(560, 272)
+
+[node name="Ponto07" type="Marker2D" parent="PontosItens"]
+position = Vector2(464, 304)
+
+[node name="Ponto08" type="Marker2D" parent="PontosItens"]
+position = Vector2(352, 304)
+
+[node name="Ponto09" type="Marker2D" parent="PontosItens"]
+position = Vector2(240, 288)
+
+[node name="Ponto10" type="Marker2D" parent="PontosItens"]
+position = Vector2(144, 272)
+
+[node name="Ponto11" type="Marker2D" parent="PontosItens"]
+position = Vector2(208, 208)
+
+[node name="Ponto12" type="Marker2D" parent="PontosItens"]
+position = Vector2(432, 208)
+
+[node name="Nascedouros" type="Node2D" parent="."]
+
+[node name="Noroeste" type="Marker2D" parent="Nascedouros"]
+position = Vector2(80, 64)
+
+[node name="Nordeste" type="Marker2D" parent="Nascedouros"]
+position = Vector2(560, 64)
+
+[node name="Sudoeste" type="Marker2D" parent="Nascedouros"]
+position = Vector2(80, 320)
+
+[node name="Sudeste" type="Marker2D" parent="Nascedouros"]
+position = Vector2(560, 320)
+
+[node name="Atores" type="Node2D" parent="."]
+
+[node name="Itens" type="Node2D" parent="."]
+
+[node name="Horda" type="Timer" parent="."]
+
+[node name="NascimentoItens" type="Timer" parent="."]
