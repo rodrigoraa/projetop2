@@ -2,6 +2,13 @@
 class_name ArenaPantano
 extends Node2D
 
+const SAPO := preload("res://entities/sapo.tscn")
+const MAXIMO_SAPOS := 48
+const INTERVALO_MINIMO := 0.8
+
+var jogador: CharacterBody2D
+var ativa := false
+
 const CELULA := 16
 const PASTA := "res://sprites/ninja-adventure/Backgrounds/Tilesets/"
 const GRAMA := Vector2i(11, 12)
@@ -13,6 +20,7 @@ const TERRA := Vector2i(14, 11)
 
 func _ready() -> void:
 	montar_cenario()
+	$Horda.timeout.connect(nascer_sapo)
 
 func obter_inicio() -> Vector2:
 	return $Inicio.global_position
@@ -104,3 +112,50 @@ func criar_colisao(area: Rect2, nome: String) -> void:
 	colisao.shape = forma
 	corpo.add_child(colisao)
 	$Colisoes.add_child(corpo)
+
+func iniciar(alvo: CharacterBody2D) -> void:
+	jogador = alvo
+	ativa = true
+	jogador.definir_ativo(true)
+	for ator in $Atores.get_children():
+		ator.definir_alvo(jogador)
+		ator.definir_ativo(true)
+	$Horda.start(2.0)
+
+func parar() -> void:
+	ativa = false
+	$Horda.stop()
+	$NascimentoItens.stop()
+	if is_instance_valid(jogador):
+		jogador.definir_ativo(false)
+	for ator in $Atores.get_children():
+		ator.definir_ativo(false)
+
+func limpar() -> void:
+	parar()
+	for ator in $Atores.get_children():
+		$Atores.remove_child(ator)
+		ator.queue_free()
+
+func nascer_sapo() -> void:
+	if not ativa or not is_instance_valid(jogador) or $Atores.get_child_count() >= MAXIMO_SAPOS:
+		return
+	var pontos := obter_nascedouros()
+	pontos.shuffle()
+	for ponto in pontos:
+		if ponto.global_position.distance_to(jogador.global_position) < 64.0:
+			continue
+		var forma := CircleShape2D.new()
+		forma.radius = 5.0
+		var consulta := PhysicsShapeQueryParameters2D.new()
+		consulta.shape = forma
+		consulta.transform = Transform2D(0.0, ponto.global_position)
+		consulta.collision_mask = 1
+		if not get_world_2d().direct_space_state.intersect_shape(consulta).is_empty():
+			continue
+		var sapo := SAPO.instantiate() as CharacterBody2D
+		$Atores.add_child(sapo)
+		sapo.global_position = ponto.global_position
+		sapo.definir_alvo(jogador)
+		$Horda.wait_time = maxf(INTERVALO_MINIMO, $Horda.wait_time * 0.95)
+		return

@@ -11,11 +11,13 @@ Projeto acadêmico de Jogos Digitais II.
 
 ## Estado atual
 
-A primeira etapa executa um cenário estático de pântano: arena de 640 × 384 px em grade de 16 px, chão verde e terra, duas lagoas laterais, árvores fechando o perímetro e pedras com colisão. A janela inicial de 1280 × 768 px usa filtro Nearest para manter os pixels nítidos.
+O protótipo executa um cenário de pântano: arena de 640 × 384 px em grade de 16 px, chão verde e terra, duas lagoas laterais, árvores fechando o perímetro e pedras com colisão. A janela inicial de 1280 × 768 px usa filtro Nearest para manter os pixels nítidos.
 
-O centro fica livre. A arena oferece o início do jogador, 12 pontos de itens e quatro nascedouros como `Marker2D`. Os contêineres `Atores` e `Itens` e os timers `Horda` e `NascimentoItens` ficam dentro de `Arena`; os timers começam parados. As camadas físicas são Mundo (1), Jogador (2) e Inimigos (3).
+O centro fica livre. A arena oferece o início do jogador, 12 pontos de itens e quatro nascedouros como `Marker2D`. Os contêineres `Atores` e `Itens` e os timers `Horda` e `NascimentoItens` ficam dentro de `Arena`. A arena isolada começa inativa; a cena principal inicia a partida automaticamente nesta etapa. As camadas físicas são Mundo (1), Jogador (2) e Inimigos (3).
 
-As próximas etapas acrescentarão jogador, sapos, coleta e interface. Ainda não há movimentação, dano nem itens surgindo. O objetivo planejado continua sendo coletar 20 itens.
+Use **WASD ou setas** para mover o Hunter a 80 px/s. Os sapos pequenos perseguem diretamente a 40 px/s, respeitando o mundo. A horda começa com um nascimento a cada 2 s, reduz o intervalo em 5% até 0,8 s e limita a arena a 48 sapos. Os nascimentos usam pontos livres do mundo a pelo menos 64 px do jogador.
+
+O jogador começa com três vidas. Contato com sapos tira uma vida e concede 1 s de invencibilidade, indicada pela transparência do personagem. Ao morrer, a partida para e o botão **Reiniciar** restaura as vidas e limpa a horda. A perseguição é simples: sapos podem ficar presos em obstáculos. Ainda não há coleta; o objetivo planejado continua sendo juntar 20 itens.
 
 ## Executar e testar
 
@@ -26,10 +28,11 @@ Na raiz do repositório:
 ```sh
 godot --headless --path . --editor --import
 godot --headless --path . --script tests/test_arena.gd
+godot --headless --path . --script tests/test_atores.gd
 godot --headless --path . --quit-after 120
 ```
 
-O teste retorna código diferente de zero se a dimensão, consultas, pontos livres, centro transitável, colisões ou nós reservados estiverem incorretos. O mapa é montado em `scripts/arena.gd` ao executar a cena; os pontos ficam editáveis em `scenes/arena.tscn`. A assistência de IA está indicada nos scripts novos.
+Os testes retornam código diferente de zero em caso de falha. Verificam arena, movimento por ações de entrada, velocidade diagonal, colisões, perseguição, contato com invencibilidade, morte única, limite de horda, parada e reinício usando cenas e física reais. O mapa é montado em `scripts/arena.gd` ao executar a cena; os pontos ficam editáveis em `scenes/arena.tscn`. A assistência de IA está indicada nos scripts novos.
 
 Em ambientes com diretório pessoal somente para leitura, execute antes:
 

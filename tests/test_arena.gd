@@ -72,6 +72,12 @@ func executar() -> void:
 		for x in range(256, 385, 32):
 			exigir(livre(arena, Vector2(x, y)), "Centro deve continuar transitável.")
 	exigir(arena.get_node_or_null("Chao") is TileMapLayer, "Chão precisa usar TileMapLayer.")
+	# Arena isolada reserva timers inativos; Principal inicia a horda na Task 2.
+	for nome in ["Horda", "NascimentoItens"]:
+		var timer := arena.get_node_or_null(nome) as Timer
+		exigir(timer != null, "Timer reservado ausente: " + nome)
+		if timer != null:
+			exigir(timer.is_stopped() and not timer.autostart, "Timer deve iniciar inativo: " + nome)
 	arena.queue_free()
 	var principal := load("res://scenes/principal.tscn") as PackedScene
 	exigir(principal != null, "Cena principal precisa existir.")
@@ -83,8 +89,6 @@ func executar() -> void:
 		for nome in ["Horda", "NascimentoItens"]:
 			var timer := jogo.get_node("Arena").get_node_or_null(nome) as Timer
 			exigir(timer != null, "Timer reservado ausente: " + nome)
-			if timer != null:
-				exigir(timer.is_stopped() and not timer.autostart, "Timer deve iniciar inativo: " + nome)
 		jogo.queue_free()
 	terminar()
 
