@@ -2,6 +2,9 @@
 class_name ArenaPantano
 extends Node2D
 
+signal item_coletado
+
+const ITEM := preload("res://entities/item.tscn")
 const SAPO := preload("res://entities/sapo.tscn")
 const MAXIMO_SAPOS := 48
 const INTERVALO_MINIMO := 0.8
@@ -21,6 +24,7 @@ const TERRA := Vector2i(14, 11)
 func _ready() -> void:
 	montar_cenario()
 	$Horda.timeout.connect(nascer_sapo)
+	$NascimentoItens.timeout.connect(nascer_item)
 
 func obter_inicio() -> Vector2:
 	return $Inicio.global_position
@@ -120,7 +124,12 @@ func iniciar(alvo: CharacterBody2D) -> void:
 	for ator in $Atores.get_children():
 		ator.definir_alvo(jogador)
 		ator.definir_ativo(true)
+	for item in $Itens.get_children():
+		item.definir_ativo(true)
 	$Horda.start(2.0)
+	$NascimentoItens.start(3.0)
+	if $Itens.get_child_count() == 0:
+		nascer_item()
 
 func parar() -> void:
 	ativa = false
@@ -130,12 +139,16 @@ func parar() -> void:
 		jogador.definir_ativo(false)
 	for ator in $Atores.get_children():
 		ator.definir_ativo(false)
+	for item in $Itens.get_children():
+		item.definir_ativo(false)
 
 func limpar() -> void:
 	parar()
-	for ator in $Atores.get_children():
-		$Atores.remove_child(ator)
-		ator.queue_free()
+	jogador = null
+	for conteiner in [$Atores, $Itens]:
+		for filho in conteiner.get_children():
+			conteiner.remove_child(filho)
+			filho.queue_free()
 
 func nascer_sapo() -> void:
 	if not ativa or not is_instance_valid(jogador) or $Atores.get_child_count() >= MAXIMO_SAPOS:
@@ -159,3 +172,25 @@ func nascer_sapo() -> void:
 		sapo.definir_alvo(jogador)
 		$Horda.wait_time = maxf(INTERVALO_MINIMO, $Horda.wait_time * 0.95)
 		return
+
+func nascer_item() -> void:
+	if not ativa:
+		return
+	var ocupados: Array[Vector2] = []
+	for item in $Itens.get_children():
+		if not item.foi_coletado and not item.is_queued_for_deletion():
+			ocupados.append(item.global_position)
+	var pontos := obter_pontos_itens()
+	pontos.shuffle()
+	for ponto in pontos:
+		if ocupados.has(ponto.global_position):
+			continue
+		var item := ITEM.instantiate() as Area2D
+		item.position = $Itens.to_local(ponto.global_position)
+		item.coletado.connect(ao_coletar_item)
+		$Itens.add_child(item)
+		return
+
+func ao_coletar_item(_item: Area2D) -> void:
+	if ativa:
+		item_coletado.emit()

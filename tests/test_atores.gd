@@ -150,16 +150,22 @@ func executar() -> void:
 	root.add_child(jogo)
 	await quadros(2)
 	var personagem := jogo.get_node("Jogador") as CharacterBody2D
-	exigir(personagem.vida == 3 and not jogo.get_node("Arena/Horda").is_stopped(), "Partida deve iniciar jogador e horda.")
-	exigir(jogo.get_node("Interface/Vida").text.contains("3"), "Interface deve apresentar vida inicial.")
+	for nome in ["Horda", "NascimentoItens"]:
+		exigir(jogo.get_node("Arena/" + nome).is_stopped(), "INICIO mantém timer parado: " + nome)
+	jogo.iniciar_partida()
+	exigir(personagem.vida == 3 and not jogo.get_node("Arena/Horda").is_stopped(), "Início explícito deve iniciar jogador e horda.")
+	exigir(not jogo.get_node("Arena/NascimentoItens").is_stopped(), "Início explícito também inicia itens.")
+	exigir(jogo.get_node("Interface/HUD/Linha/Vida").text.contains("3"), "Interface deve apresentar vida inicial.")
 	for i in range(3):
 		personagem.receber_dano()
 		await quadros(61)
-	exigir(jogo.get_node("Arena/Horda").is_stopped(), "Morte deve parar partida.")
-	exigir(jogo.get_node("Interface/Reiniciar").visible, "Morte deve oferecer reinício.")
-	jogo.get_node("Interface/Reiniciar").pressed.emit()
+	for nome in ["Horda", "NascimentoItens"]:
+		exigir(jogo.get_node("Arena/" + nome).is_stopped(), "Morte deve parar timer: " + nome)
+	exigir(jogo.get_node("Interface/Resultado/Cartao/Conteudo/Reiniciar").visible, "Morte deve oferecer reinício.")
+	jogo.get_node("Interface/Resultado/Cartao/Conteudo/Reiniciar").pressed.emit()
 	await quadros(2)
 	exigir(personagem.vida == 3 and not jogo.get_node("Arena/Horda").is_stopped(), "Botão deve reiniciar vida e horda.")
+	exigir(not jogo.get_node("Arena/NascimentoItens").is_stopped(), "Botão também reinicia timer de itens.")
 	exigir(jogo.get_node("Arena/Atores").get_child_count() == 0, "Reinício deve remover horda anterior.")
 	jogo.queue_free()
 	await process_frame
