@@ -13,3 +13,8 @@ script = ExtResource("3_principal")
 [node name="Jogador" parent="." instance=ExtResource("2_jogador")]
 
 [node name="Interface" parent="." instance=ExtResource("4_interface")]
+
+[node name="Relogio" type="Timer" parent="."]
+process_callback = 0
+wait_time = 60.0
+one_shot = true

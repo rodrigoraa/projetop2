@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/principal.tscn" id="1_principal"]
+
+[node name="Aula09Sobrevivencia" instance=ExtResource("1_principal")]
+sobrevivencia = true

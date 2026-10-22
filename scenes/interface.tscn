@@ -41,6 +41,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 13
 text = "Itens: 0 / 20"
 
+[node name="Tempo" type="Label" parent="HUD/Linha"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "Tempo: 60 s"
+
 [node name="Inicio" type="ColorRect" parent="."]
 visible = false
 offset_right = 640.0

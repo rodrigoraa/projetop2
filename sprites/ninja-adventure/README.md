@@ -7,7 +7,7 @@ Autores: **Pixel-boy e AAA**. Licença: **CC0 1.0 Universal**.
 - [Licença original integral](LICENSE.txt)
 - [Proveniência, medidas e SHA256 por arquivo](PROVENIENCIA.json)
 
-Os PNGs foram copiados sem redimensionamento, recorte ou recoloração. A estrutura e os nomes internos do pacote foram preservados. Não foram incorporados scripts, cenas ou metadados Unity do espelho.
+Copiei os PNGs sem redimensionar, recortar ou mudar as cores. Mantive a estrutura e os nomes internos do pacote e não trouxe os scripts, cenas ou metadados Unity do espelho.
 
 ## Conteúdo disponível
 
@@ -30,10 +30,10 @@ Os PNGs foram copiados sem redimensionamento, recorte ou recoloração. A estrut
 - Os sapos maiores têm animações frontais, não animações completas nas quatro direções. Os retratos `Faceset.png` são imagens separadas, não quadros de movimento.
 - Nos sapos maiores: repouso tem 5 quadros; salto, 6; preparação, 7; ataque e dano, 3 cada. Cada quadro tem 40 × 40 px.
 - A pasta `Boss` é o nome do pacote original. Sua presença não define uma mecânica de chefe para o projeto. Da mesma forma, as animações de ataque não tornam combate obrigatório em Coleta.
-- A arte ainda precisa ser importada e configurada na Godot. Estes arquivos, por si só, não criam colisões, animações, coleta ou efeitos de veneno.
+- Configurei na Godot as colisões, as animações e a coleta usadas no jogo. Os sprites restantes ficam disponíveis para avaliar depois.
 - O terreno usa principalmente peças de 16 × 16 px, mas há imagens e objetos de outros tamanhos. `TilesetFloor.png` tem altura original de 417 px; confira a região útil ao configurar o atlas, sem presumir que toda a imagem seja uma grade exata.
-- O personagem e os ícones são alternativas para avaliação. A escolha final do jogador e do item coletável ainda não foi definida.
+- Escolhi o Hunter como jogador, o sapo pequeno como inimigo e a TeaLeaf como coletável.
 
 ## Origem do download
 
-A página oficial não pôde ser acessada neste ambiente por restrição do proxy. A seleção veio de `Assets/NinjaAdventure` no espelho público `MarioLDD/Kuroshiro-adventure`, commit `0476a561d5e6da477d5d2de2e738f0595754adbb`. O README do pacote identifica os autores, aponta a página oficial e declara CC0; a licença integral acompanha a seleção.
+Não consegui acessar a página oficial por causa do proxy do ambiente. Baixei a seleção de `Assets/NinjaAdventure` no espelho público `MarioLDD/Kuroshiro-adventure`, commit `0476a561d5e6da477d5d2de2e738f0595754adbb`. Conferi os autores e a licença no README original e mantive os dois arquivos junto dos sprites.
