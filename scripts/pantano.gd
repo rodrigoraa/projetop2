@@ -2,8 +2,10 @@
 extends Node2D
 
 @export var cena_inimigo: PackedScene
+@export var cena_item: PackedScene
 var finalizada := false
 var abates := 0
+var coletados := 0
 
 @onready var horda: Timer = $Horda
 @onready var relogio: Timer = $Relogio
@@ -13,7 +15,7 @@ var abates := 0
 
 func _process(_delta: float) -> void:
 	texto_vida.text = "Vida: %d  Abates: %d" % [jogador.vida, abates]
-	texto_tempo.text = "Tempo: %d" % ceili(relogio.time_left)
+	texto_tempo.text = "Itens: %d / 20" % coletados
 
 func _on_horda_timeout() -> void:
 	if finalizada:
@@ -26,7 +28,7 @@ func _on_horda_timeout() -> void:
 	horda.wait_time = maxf(0.5, horda.wait_time * 0.95)
 
 func _on_relogio_timeout() -> void:
-	vencer()
+	pass
 
 func vencer() -> void:
 	encerrar("res://scenes/vitoria.tscn")
@@ -40,9 +42,24 @@ func encerrar(destino: String) -> void:
 	finalizada = true
 	horda.stop()
 	relogio.stop()
+	$Itens.stop()
 	# call_deferred: troca de cena só no fim do quadro, quando a física terminou.
 	get_tree().change_scene_to_file.call_deferred(destino)
 
 func inimigo_morreu(_inimigo: Node2D) -> void:
 	if not finalizada:
 		abates += 1
+
+func _on_itens_timeout() -> void:
+	if finalizada:
+		return
+	var item := cena_item.instantiate() as Area2D
+	item.global_position = $Pontos.get_children().pick_random().global_position
+	add_child(item)
+
+func coletou() -> void:
+	if finalizada:
+		return
+	coletados += 1
+	if coletados >= 20:
+		vencer()

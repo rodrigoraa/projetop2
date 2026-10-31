@@ -17,3 +17,4 @@ Como ficou: um segundo de proteção após dano e vitória ao sobreviver por 60 
 O que foi feito: caminhos para os inimigos, estados de espera e perseguição, ataque e contador de abates.
 O que travou: o inimigo demorou numa quina da casa durante a conferência do caminho.
 Como foi conferido: folga 10 e distâncias 4 do roteiro, chegada depois de contornar a casa e recarga do ataque de 0,4 segundo.
+Ficha Coleta: aplicada depois da tag da aula, com oito pontos, itens a cada três segundos e vitória em 20 coletas.

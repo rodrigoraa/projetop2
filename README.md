@@ -7,10 +7,14 @@
 ## Como jogar
 
 Abra `project.godot` no Godot 4.7.1 e aperte F5.
-Use WASD ou as setas para andar e Espaço para atacar.
 
-Nesta entrega, sobreviva por 60 segundos para vencer. Os inimigos contornam os obstáculos e o placar conta os abates. Você começa com três vidas.
-Se elas acabarem, você perde. Aperte Enter na tela final para jogar de novo.
+- WASD ou setas: andar.
+- Espaço: atacar.
+- Enter na tela final: jogar de novo.
+
+Junte 20 cogumelos para vencer. Você começa com três vidas e perde se elas acabarem.
+Um cogumelo aparece a cada três segundos. Os inimigos aparecem nas pontas das ruas e perseguem o jogador.
+O ataque serve para se defender; abates não substituem a coleta.
 
 ![Imagem do jogo](docs/partida.png)
 
