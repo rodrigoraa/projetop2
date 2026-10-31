@@ -18,3 +18,9 @@ O que foi feito: caminhos para os inimigos, estados de espera e perseguição, a
 O que travou: o inimigo demorou numa quina da casa durante a conferência do caminho.
 Como foi conferido: folga 10 e distâncias 4 do roteiro, chegada depois de contornar a casa e recarga do ataque de 0,4 segundo.
 Ficha Coleta: aplicada depois da tag da aula, com oito pontos, itens a cada três segundos e vitória em 20 coletas.
+
+## Personalização do cenário — 30/10/2026
+
+O que foi feito: pântano maior, lagoas, sapos saindo da água, árvores com profundidade e casas para se esconder.
+O que travou: os caminhos do mapa maior precisavam terminar de carregar antes da perseguição.
+Como ficou: os sapos aguardam os caminhos ficarem prontos; coleta, ataque e três vidas foram mantidos.

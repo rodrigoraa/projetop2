@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <!-- Primeiro quadro do sapo, preservado como ícone independente. -->
+  <path fill="#132d31" d="M3 2h3v2h4V2h3v5h1v2h1v4h-3v1h-2v-2H6v2H4v-1H1V9h1V7h1z"/>
+  <path fill="#c9ed47" d="M4 3h1v3h6V3h1v5h1v3h-2v1H5v-1H3V8h1zM2 10h2v2H2zM12 10h2v2h-2z"/>
+  <path fill="#ffda6b" d="M5 6h6v2H5zM6 10h4v1H6zM4 12h1v1H4zM11 12h1v1h-1z"/>
+  <path fill="#f3f5dd" d="M3 3h3v3H3zM10 3h3v3h-3z"/>
+  <path fill="#132d31" d="M4 3h1v2H4zM11 3h1v2h-1zM6 7h4v1H6z"/>
+  <path fill="#6655aa" d="M4 8h2v2H4zM10 8h2v2h-2zM7 9h2v2H7z"/>
+</svg>

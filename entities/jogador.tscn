@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3]
+[gd_scene format=3]
 
 [ext_resource type="Script" path="res://scripts/jogador.gd" id="1_script"]
 [ext_resource type="Texture2D" path="res://sprites/personagem.png" id="2_personagem"]
@@ -19,21 +19,21 @@ region = Rect2(32, 0, 16, 16)
 atlas = ExtResource("2_personagem")
 region = Rect2(48, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_esquerda_0"]
+[sub_resource type="AtlasTexture" id="Atlas_cima_0"]
 atlas = ExtResource("2_personagem")
-region = Rect2(0, 16, 16, 16)
+region = Rect2(0, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_esquerda_1"]
+[sub_resource type="AtlasTexture" id="Atlas_cima_1"]
 atlas = ExtResource("2_personagem")
-region = Rect2(16, 16, 16, 16)
+region = Rect2(16, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_esquerda_2"]
+[sub_resource type="AtlasTexture" id="Atlas_cima_2"]
 atlas = ExtResource("2_personagem")
-region = Rect2(32, 16, 16, 16)
+region = Rect2(32, 48, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_esquerda_3"]
+[sub_resource type="AtlasTexture" id="Atlas_cima_3"]
 atlas = ExtResource("2_personagem")
-region = Rect2(48, 16, 16, 16)
+region = Rect2(48, 48, 16, 16)
 
 [sub_resource type="AtlasTexture" id="Atlas_direita_0"]
 atlas = ExtResource("2_personagem")
@@ -51,42 +51,90 @@ region = Rect2(32, 32, 16, 16)
 atlas = ExtResource("2_personagem")
 region = Rect2(48, 32, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_cima_0"]
+[sub_resource type="AtlasTexture" id="Atlas_esquerda_0"]
 atlas = ExtResource("2_personagem")
-region = Rect2(0, 48, 16, 16)
+region = Rect2(0, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_cima_1"]
+[sub_resource type="AtlasTexture" id="Atlas_esquerda_1"]
 atlas = ExtResource("2_personagem")
-region = Rect2(16, 48, 16, 16)
+region = Rect2(16, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_cima_2"]
+[sub_resource type="AtlasTexture" id="Atlas_esquerda_2"]
 atlas = ExtResource("2_personagem")
-region = Rect2(32, 48, 16, 16)
+region = Rect2(32, 16, 16, 16)
 
-[sub_resource type="AtlasTexture" id="Atlas_cima_3"]
+[sub_resource type="AtlasTexture" id="Atlas_esquerda_3"]
 atlas = ExtResource("2_personagem")
-region = Rect2(48, 48, 16, 16)
+region = Rect2(48, 16, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jogador"]
 animations = [{
-"frames": [{"duration": 1.0, "texture": SubResource("Atlas_baixo_0")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo_1")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo_2")}, {"duration": 1.0, "texture": SubResource("Atlas_baixo_3")}],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_baixo_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_baixo_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_baixo_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_baixo_3")
+}],
+"loop": 1,
 "name": &"baixo",
 "speed": 8.0
 }, {
-"frames": [{"duration": 1.0, "texture": SubResource("Atlas_esquerda_0")}, {"duration": 1.0, "texture": SubResource("Atlas_esquerda_1")}, {"duration": 1.0, "texture": SubResource("Atlas_esquerda_2")}, {"duration": 1.0, "texture": SubResource("Atlas_esquerda_3")}],
-"loop": true,
-"name": &"esquerda",
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_cima_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_cima_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_cima_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_cima_3")
+}],
+"loop": 1,
+"name": &"cima",
 "speed": 8.0
 }, {
-"frames": [{"duration": 1.0, "texture": SubResource("Atlas_direita_0")}, {"duration": 1.0, "texture": SubResource("Atlas_direita_1")}, {"duration": 1.0, "texture": SubResource("Atlas_direita_2")}, {"duration": 1.0, "texture": SubResource("Atlas_direita_3")}],
-"loop": true,
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_direita_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_direita_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_direita_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_direita_3")
+}],
+"loop": 1,
 "name": &"direita",
 "speed": 8.0
 }, {
-"frames": [{"duration": 1.0, "texture": SubResource("Atlas_cima_0")}, {"duration": 1.0, "texture": SubResource("Atlas_cima_1")}, {"duration": 1.0, "texture": SubResource("Atlas_cima_2")}, {"duration": 1.0, "texture": SubResource("Atlas_cima_3")}],
-"loop": true,
-"name": &"cima",
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_esquerda_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_esquerda_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_esquerda_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_esquerda_3")
+}],
+"loop": 1,
+"name": &"esquerda",
 "speed": 8.0
 }]
 
@@ -96,52 +144,50 @@ size = Vector2(10, 6)
 [sub_resource type="CircleShape2D" id="CircleShape2D_hurtbox"]
 radius = 6.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ataque"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m0gj8"]
 radius = 20.0
 
-[node name="Jogador" type="CharacterBody2D" groups=["player"]]
+[node name="Jogador" type="CharacterBody2D" unique_id=1703672065 groups=["player"]]
 collision_layer = 2
-collision_mask = 1
 motion_mode = 1
 script = ExtResource("1_script")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-z_index = 1
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1158171483]
 sprite_frames = SubResource("SpriteFrames_jogador")
 animation = &"baixo"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1087771129]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_pes")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1903239433]
 zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
-limit_right = 640
-limit_bottom = 384
+limit_right = 1280
+limit_bottom = 768
 
-[node name="Hurtbox" type="Area2D" parent="."]
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1739501286]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1772152661]
 position = Vector2(0, 2)
 shape = SubResource("CircleShape2D_hurtbox")
 
-[node name="Ataque" type="Area2D" parent="."]
+[node name="Ataque" type="Area2D" parent="." unique_id=410084398]
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ataque" unique_id=2040559573]
 position = Vector2(0, 2)
-shape = SubResource("CircleShape2D_ataque")
+shape = SubResource("CircleShape2D_m0gj8")
 
-[node name="Golpe" type="ColorRect" parent="Ataque"]
+[node name="Golpe" type="ColorRect" parent="Ataque" unique_id=301733382]
 visible = false
 offset_left = -20.0
 offset_top = -18.0
 offset_right = 20.0
 offset_bottom = 22.0
 mouse_filter = 2
-color = Color(1, 1, 1, 0.35294118)
+color = Color(1, 1, 1, 0.3529412)

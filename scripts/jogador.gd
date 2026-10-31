@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var velocidade: float = 70.0
 @export var vida: int = 3
 var invencivel := false
+var escondido := false
 var pode_atacar := true
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hurtbox: Area2D = $Hurtbox
@@ -12,7 +13,7 @@ var pode_atacar := true
 
 func _process(_delta: float) -> void:
 	# Tem inimigo encostando em mim?
-	if not invencivel and hurtbox.has_overlapping_bodies():
+	if not escondido and not invencivel and hurtbox.has_overlapping_bodies():
 		levar_dano()
 	if pode_atacar and Input.is_action_just_pressed("atacar"):
 		atacar()
@@ -36,7 +37,7 @@ func _physics_process(_delta: float) -> void:
 			anim.play("cima")
 
 func levar_dano() -> void:
-	if invencivel or vida <= 0:
+	if escondido or invencivel or vida <= 0:
 		return
 	vida -= 1
 	if vida <= 0:
@@ -50,7 +51,7 @@ func levar_dano() -> void:
 	invencivel = false
 
 func atacar() -> void:
-	if not pode_atacar:
+	if not pode_atacar or escondido or vida <= 0:
 		return
 	# Acerta os inimigos dentro do circulo neste quadro.
 	for inimigo in ataque.get_overlapping_bodies():

@@ -24,6 +24,7 @@ func _on_horda_timeout() -> void:
 	var ponto: Marker2D = $Nascedouros.get_children().pick_random()
 	add_child(inimigo)
 	inimigo.global_position = ponto.global_position
+	inimigo.sair_do_lago(ponto.get_node("Saida").global_position)
 	# A horda aperta: cada inimigo chega um pouco mais cedo que o anterior.
 	horda.wait_time = maxf(0.5, horda.wait_time * 0.95)
 

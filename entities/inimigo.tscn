@@ -1,28 +1,25 @@
-[gd_scene load_steps=4 format=3]
+[gd_scene format=3]
 
 [ext_resource type="Script" path="res://scripts/inimigo.gd" id="1_script"]
-[ext_resource type="Texture2D" path="res://sprites/personagem.png" id="2_personagem"]
+[ext_resource type="Texture2D" path="res://sprites/sapo.svg" id="2_dc5j5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pes"]
 size = Vector2(10, 6)
 
-[node name="Inimigo" type="CharacterBody2D" groups=["inimigo"]]
+[node name="Inimigo" type="CharacterBody2D" unique_id=338081314 groups=["inimigo"]]
 collision_layer = 4
 collision_mask = 5
 motion_mode = 1
 script = ExtResource("1_script")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 0.25, 0.25, 1)
-z_index = 1
-texture = ExtResource("2_personagem")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=401541994]
+texture = ExtResource("2_dc5j5")
 hframes = 4
-vframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=245056753]
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_pes")
 
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=1107116004]
 path_desired_distance = 4.0
 target_desired_distance = 4.0
