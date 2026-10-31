@@ -1,8 +1,9 @@
-# Base: Aula 09 do Prof. Ezefferth.
+# Base: Aulas 09 e 10 do Prof. Ezefferth.
 extends Node2D
 
 @export var cena_inimigo: PackedScene
 var finalizada := false
+var abates := 0
 
 @onready var horda: Timer = $Horda
 @onready var relogio: Timer = $Relogio
@@ -11,7 +12,7 @@ var finalizada := false
 @onready var texto_tempo: Label = $HUD/Tempo
 
 func _process(_delta: float) -> void:
-	texto_vida.text = "Vida: %d" % jogador.vida
+	texto_vida.text = "Vida: %d  Abates: %d" % [jogador.vida, abates]
 	texto_tempo.text = "Tempo: %d" % ceili(relogio.time_left)
 
 func _on_horda_timeout() -> void:
@@ -41,3 +42,7 @@ func encerrar(destino: String) -> void:
 	relogio.stop()
 	# call_deferred: troca de cena só no fim do quadro, quando a física terminou.
 	get_tree().change_scene_to_file.call_deferred(destino)
+
+func inimigo_morreu(_inimigo: Node2D) -> void:
+	if not finalizada:
+		abates += 1

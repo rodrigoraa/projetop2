@@ -11,3 +11,9 @@ Como ficou: mapa de 40 por 24 peças, movimento e câmera conforme o roteiro.
 O que foi feito: inimigo vermelho, horda, três vidas, placar e telas de vitória e derrota.
 O que precisou de cuidado: as camadas de colisão, o toque do inimigo e as ligações dos relógios.
 Como ficou: um segundo de proteção após dano e vitória ao sobreviver por 60 segundos.
+
+## Aula 10 — 30/10/2026
+
+O que foi feito: caminhos para os inimigos, estados de espera e perseguição, ataque e contador de abates.
+O que travou: o inimigo demorou numa quina da casa durante a conferência do caminho.
+Como foi conferido: folga 10 e distâncias 4 do roteiro, chegada depois de contornar a casa e recarga do ataque de 0,4 segundo.
