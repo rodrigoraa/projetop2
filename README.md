@@ -9,7 +9,7 @@
 Abra `project.godot` no Godot 4.7.1 e aperte F5.
 
 - WASD ou setas: andar.
-- Espaço: atacar.
+- Espaço: atacar para onde estiver olhando.
 - E: entrar e sair das casas.
 - Enter na tela final: jogar de novo.
 

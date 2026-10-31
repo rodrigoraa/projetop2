@@ -24,3 +24,9 @@ Ficha Coleta: aplicada depois da tag da aula, com oito pontos, itens a cada trê
 O que foi feito: pântano maior, lagoas, sapos saindo da água, árvores com profundidade e casas para se esconder.
 O que travou: os caminhos do mapa maior precisavam terminar de carregar antes da perseguição.
 Como ficou: os sapos aguardam os caminhos ficarem prontos; coleta, ataque e três vidas foram mantidos.
+
+## Ataque direcional — 30/10/2026
+
+O que foi feito: o golpe passou a acertar só na frente do boneco.
+O que precisou de cuidado: manter a direção ao parar e fazer o clarão acompanhar o lado do ataque.
+Como ficou: ataque nas quatro direções, com o mesmo alcance e intervalo entre golpes.

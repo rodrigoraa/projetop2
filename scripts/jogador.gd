@@ -53,10 +53,25 @@ func levar_dano() -> void:
 func atacar() -> void:
 	if not pode_atacar or escondido or vida <= 0:
 		return
-	# Acerta os inimigos dentro do circulo neste quadro.
+	var frente := Vector2.DOWN
+	var efeito := Rect2(-20, 0, 40, 22)
+	match anim.animation:
+		&"cima":
+			frente = Vector2.UP
+			efeito = Rect2(-20, -18, 40, 18)
+		&"esquerda":
+			frente = Vector2.LEFT
+			efeito = Rect2(-20, -18, 20, 40)
+		&"direita":
+			frente = Vector2.RIGHT
+			efeito = Rect2(0, -18, 20, 40)
+	# Acerta apenas os inimigos à frente, dentro do círculo neste quadro.
 	for inimigo in ataque.get_overlapping_bodies():
-		inimigo.levar_golpe()
+		if frente.dot(inimigo.global_position - global_position) > 0.0:
+			inimigo.levar_golpe()
 	pode_atacar = false
+	golpe.position = efeito.position
+	golpe.size = efeito.size
 	golpe.visible = true
 	await get_tree().create_timer(0.1).timeout
 	golpe.visible = false
